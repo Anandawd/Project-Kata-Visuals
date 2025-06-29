@@ -12,7 +12,7 @@ export default function About() {
           <div className="flex flex-col justify-between  h-[100%] xl:h-[75%] space-y-14 pr-12 md:space-y-8 ">
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-                About Kata Visuals
+                About Kata Visual
               </h2>
 
               <p className="text-lg text-gray-600 leading-relaxed w-[80%]">
