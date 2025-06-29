@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all  duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "glass text-gray-950 "
           : "bg-transparent text-gray-50 hover:text-gray-200"
@@ -46,7 +46,9 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-50 font-medium hover:text-gray-50/80 transition-colors duration-200"
+                className={`font-medium ${
+                  isScrolled ? "hover:text-gray-50" : "hover:text-gray-900"
+                }`}
               >
                 {item.name}
               </Link>
@@ -56,14 +58,16 @@ export default function Header() {
           {/* Contact Button */}
           <Link
             href="/contact"
-            className="hidden lg:block btn-glass text-gray-50 px-6 py-2 rounded-full font-medium"
+            className={`hidden lg:block text-gray-50 px-8 py-2 rounded-full font-medium ${
+              isScrolled ? "btn-glass-dark" : "btn-glass"
+            }`}
           >
             Contact
           </Link>
 
           {/* Mobile Menu Button */}
           <button
-            className="cursor-pointer lg:hidden p-2 rounded-md hover:bg-white/10 transition-colors"
+            className="cursor-pointer lg:hidden p-2 rounded-md hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -82,7 +86,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="font-medium hover:text-gray-50 transition-colors duration-200"
+                  className="font-medium hover:text-gray-50"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -90,7 +94,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="px-6 py-2 rounded-full font-medium text-center  bg-gradient-to-r from-gray-950 to-gray-800 text-gray-50 hover:shadow-lg transition-all duration-300"
+                className={` btn-glass-dark text-gray-50 px-8 py-2 rounded-full font-medium`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
