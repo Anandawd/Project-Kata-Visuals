@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Close from "./icons/Close";
+import Hamburger from "./icons/Hamburger";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,16 +27,16 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all  duration-300 ${
         isScrolled
-          ? "glass backdrop-blur-md bg-white/25 border-b border-white/18"
-          : "bg-transparent"
-      }`}
+          ? "glass text-gray-950 "
+          : "bg-transparent text-gray-50 hover:text-gray-200"
+      } `}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20 ">
           {/* Logo */}
-          <Link href="/" className="text-2xl lg:text-3xl font-bold text-white">
+          <Link href="/" className="text-2xl lg:text-3xl font-bold">
             KATA VISUAL
           </Link>
 
@@ -44,7 +46,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-white font-medium hover:text-white/80 transition-colors duration-200"
+                className="text-gray-50 font-medium hover:text-gray-50/80 transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -54,50 +56,33 @@ export default function Header() {
           {/* Contact Button */}
           <Link
             href="/contact"
-            className="hidden lg:block btn-glass text-white px-6 py-2 rounded-full font-medium"
+            className="hidden lg:block btn-glass text-gray-50 px-6 py-2 rounded-full font-medium"
           >
             Contact
           </Link>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-md text-white hover:bg-white/10 transition-colors"
+            className="cursor-pointer lg:hidden p-2 rounded-md hover:bg-white/10 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isMobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            {isMobileMenuOpen ? (
+              <Hamburger width={24} height={24} />
+            ) : (
+              <Close width={24} height={24} />
+            )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden glass rounded-lg mt-2 p-4 backdrop-blur-md bg-white/25 border border-white/18">
-            <nav className="flex flex-col space-y-4">
+          <div className="lg:hidden glass rounded-lg mt-2 p-4 backdrop-blur-md bg-white/25 border border-white/18 mb-10">
+            <nav className="flex flex-col text-center space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-white font-medium hover:text-white/80 transition-colors duration-200"
+                  className="font-medium hover:text-gray-50 transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -105,7 +90,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="btn-glass text-white px-6 py-2 rounded-full font-medium text-center"
+                className="px-6 py-2 rounded-full font-medium text-center  bg-gradient-to-r from-gray-950 to-gray-800 text-gray-50 hover:shadow-lg transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
