@@ -60,28 +60,79 @@ export default function AboutPage() {
           {/* About Section */}
           <div className="grid md:grid-cols-2 lg:h-[480px] items-center">
             {/* Text Content */}
-            <div className="flex flex-col justify-between  h-[100%] xl:h-[75%] space-y-14 pr-12 md:space-y-8 ">
-              <div className="space-y-6">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-                  About Kata Visual
-                </h2>
+            <div className="order-1 md:order-1">
+              {/* Mobile: Center Layout */}
+              <div className="block md:hidden text-center space-y-8 ">
+                <div className="space-y-6">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                    About Kata Visual
+                  </h2>
 
-                <p className="text-lg text-gray-600 leading-relaxed w-[80%]">
-                  Welcome to Kata Visuals, where every frame tells a story. We
-                  are passionate photographers dedicated to capturing life's
-                  most precious moments with artistry and authenticity.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed w-[80%]">
-                  Founded in Bali, our team combines years of experience with a
-                  fresh perspective on visual storytelling. We believe that
-                  every moment deserves to be preserved beautifully, whether
-                  it's a wedding, corporate event, or family gathering.
-                </p>
+                  <p className="text-lg text-gray-600 leading-relaxed ">
+                    Welcome to Kata Visuals, where every frame tells a story. We
+                    are passionate photographers dedicated to capturing life's
+                    most precious moments with artistry and authenticity.
+                  </p>
+                  <p className="text-lg text-gray-600 leading-relaxed ">
+                    Founded in Bali, our team combines years of experience with
+                    a fresh perspective on visual storytelling. We believe that
+                    every moment deserves to be preserved beautifully, whether
+                    it's a wedding, corporate event, or family gathering.
+                  </p>
+                </div>
+              </div>
+
+              {/* Desktop: Left Layout */}
+              <div className="hidden md:flex flex-col justify-between h-[100%] xl:h-[75%] space-y-14 pr-12">
+                <div className="space-y-6">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                    About Kata Visual
+                  </h2>
+
+                  <p className="text-lg text-gray-600 leading-relaxed w-[80%]">
+                    Welcome to Kata Visuals, where every frame tells a story. We
+                    are passionate photographers dedicated to capturing life's
+                    most precious moments with artistry and authenticity.
+                  </p>
+                  <p className="text-lg text-gray-600 leading-relaxed w-[80%]">
+                    Founded in Bali, our team combines years of experience with
+                    a fresh perspective on visual storytelling. We believe that
+                    every moment deserves to be preserved beautifully, whether
+                    it's a wedding, corporate event, or family gathering.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Image */}
-            <div className="hidden lg:flex gap-4 mt-12 md:mt-0">
+            {/* Image Mobile*/}
+            <div className="lg:hidden order-2 md:order-2 grid grid-cols-2 gap-4 mt-12 md:mt-0 justify-center">
+              <div className="space-y-4">
+                <div className="glass rounded-2xl overflow-hidden card-hover">
+                  <Image
+                    src={"/images/img_about_1.png"}
+                    alt="About Image"
+                    width={300}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-4 mt-8">
+                <div className="glass rounded-2xl overflow-hidden card-hover">
+                  <Image
+                    src={"/images/img_about_2.png"}
+                    alt="About Image"
+                    width={300}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Image Desktop*/}
+            <div className="hidden lg:flex gap-4 mt-12 md:mt-0 order-2 md:order-2">
               <div className="">
                 <div className="glass rounded-2xl overflow-hidden card-hover">
                   <Image
@@ -106,33 +157,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-
-            {/* Image */}
-            <div className="lg:hidden grid grid-cols-2 gap-4 mt-12 md:mt-0">
-              <div className="space-y-4 ">
-                <div className="glass rounded-2xl overflow-hidden card-hover">
-                  <Image
-                    src={"/images/img_about_1.png"}
-                    alt="About Image"
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-4 mt-8 ">
-                <div className="glass rounded-2xl overflow-hidden card-hover">
-                  <Image
-                    src={"/images/img_about_2.png"}
-                    alt="About Image"
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Services Section */}
@@ -150,10 +174,10 @@ export default function AboutPage() {
             </div>
 
             <div className="order-1 lg:order-2 space-y-6">
-              <h3 className="text-3xl sm:text-4xl font-bold text-gray-800">
+              <h3 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center md:text-left">
                 What Our Services
               </h3>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed text-center md:text-left">
                 We offer a comprehensive range of photography services tailored
                 to meet your specific needs.
               </p>

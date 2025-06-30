@@ -134,11 +134,11 @@ export default function Portfolio() {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
             {categories.map((category) => (
               <button
                 key={category}
-                className="px-6 py-3 rounded-full glass backdrop-blur-sm bg-white/40 border border-white/20 hover:bg-white/60 transition-all duration-300 text-gray-700 font-medium"
+                className="text-sm md:text-lg px-4 py-2 md:px-6 md:py-3 rounded-full glass backdrop-blur-sm bg-white/40 border border-white/20 hover:bg-white/60 transition-all duration-300 text-gray-700 font-medium"
               >
                 {category}
               </button>
@@ -167,7 +167,7 @@ export default function Portfolio() {
                   </div>
 
                   <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
+                    {/* <div className="flex items-center justify-between mb-4">
                       <span className="glass-dark text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm bg-black/30 border border-white/20">
                         {item.category}
                       </span>
@@ -184,7 +184,7 @@ export default function Portfolio() {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
-                    </div>
+                    </div> */}
 
                     <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors">
                       {item.title}
@@ -249,7 +249,7 @@ export default function Portfolio() {
                             d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
                           />
                         </svg>
-                        {item.photographer}
+                        {item.category}
                       </div>
                     </div>
 

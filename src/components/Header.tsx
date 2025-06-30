@@ -29,7 +29,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass text-gray-950 backdrop-blur-md bg-white/25 border border-white/18"
+          ? "glass text-gray-950 backdrop-blur-md bg-white/25"
           : "bg-transparent text-gray-50 hover:text-gray-200"
       } `}
     >

@@ -67,7 +67,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
             {/* Contact Form */}
-            <div>
+            <div className="order-2 md:order-1">
               <div className="glass rounded-3xl p-8 lg:p-12 backdrop-blur-lg bg-white/40 border border-white/20">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name and Phone Row */}
@@ -134,12 +134,11 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="order-1 md:order-2 space-y-8">
               {/* Header */}
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
                   Send Us Message
-                  <br />
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Ready to capture your special moments? Get in touch with us
@@ -227,7 +226,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
             {/* Office Hours Card */}
             <div className="glass rounded-2xl p-6 backdrop-blur-sm bg-white/40 border border-white/20">
               <h3 className="font-semibold text-gray-800 mb-4">Office Hours</h3>
