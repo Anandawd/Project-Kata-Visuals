@@ -47,7 +47,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`font-medium ${
-                  isScrolled ? "hover:text-gray-50" : "hover:text-gray-900"
+                  isScrolled ? "hover:text-gray-600" : "hover:text-gray-900"
                 }`}
               >
                 {item.name}
@@ -86,7 +86,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="font-medium hover:text-gray-50"
+                  className="font-medium hover:text-gray-600"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}

@@ -48,6 +48,7 @@ export default function Gallery() {
       slug: "party-photography",
     },
   ];
+
   return (
     <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
