@@ -13,9 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kata Visuals - Professional Photography Services",
+  title: "Kata Visual - Professional Photography Services in Bali",
   description:
-    "Capturing moments, creating memories. Professional photography services in Jakarta for weddings, events, portraits, and more.",
+    "Professional photography services in Bali. Specializing in wedding, portrait, family, and event photography. Based in Denpasar, Bali.",
+  keywords:
+    "photography bali, wedding photographer bali, kata visual, denpasar photographer",
+  openGraph: {
+    title: "Kata Visual - Professional Photography Services",
+    description: "Capturing moments, creating memories in Bali",
+    url: "https://kata-visual.com",
+    siteName: "Kata Visual",
+    // images: [
+    //   {
+    //     url: "https://kata-visual.com/images/og-image.jpg",
+    //     width: 1200,
+    //     height: 630,
+    //   },
+    // ],
+  },
 };
 
 export default function RootLayout({
